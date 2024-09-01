@@ -1,15 +1,9 @@
-// @use '~@angular/material' as mat;
-
-// @mixin utility-mixin($theme) {
-    // $primary : mat.define-palette(mat.$deep-purple-palette, A400);
-//     // $accent : mat.define-palette(mat.$amber-palette);
-//     // $warn : mat.define-palette(mat.$red-palette);
-//     // $foreground: map-get($theme, foreground);
-//     // $background: map-get($theme, background);
-
-
-
-// } // utility-mixin (Ends)
+@use '@angular/material' as mat;
+$primary : mat.define-palette(mat.$deep-purple-palette, A400);
+$accent : mat.define-palette(mat.$amber-palette);
+$warn : mat.define-palette(mat.$red-palette);
+// $foreground: map-get($theme, foreground);
+// $background: map-get($theme, background);
 /*
 1.) Global Links, Utilities & Buttons
 -------------------------------------*/
@@ -76,15 +70,15 @@ p {
 -------------------------------------*/
 
 .primary {
-    // color: mat.get-color-from-palette($primary);
+    color: mat.get-color-from-palette($primary);
 }
 
 .accent {
-    // color: mat.get-color-from-palette($accent);
+    color: mat.get-color-from-palette($accent);
 }
 
 .warn {
-    // color: mat.get-color-from-palette($warn);
+    color: mat.get-color-from-palette($warn);
 }
 
 .text-light {
@@ -143,15 +137,15 @@ p {
 }
 
 .bg-primary {
-    // background: mat.get-color-from-palette($primary);
+    background: mat.get-color-from-palette($primary);
 }
 
 .bg-accent {
-    // background: mat.get-color-from-palette($accent);
+    background: mat.get-color-from-palette($accent);
 }
 
 .bg-warn {
-    // background: mat.get-color-from-palette($warn);
+    background: mat.get-color-from-palette($warn);
 }
 
 
@@ -176,15 +170,15 @@ p {
 }
 
 .outline-primary {
-    // border: 1px solid mat.get-color-from-palette($primary);
+    border: 1px solid mat.get-color-from-palette($primary);
 }
 
 .outline-accent {
-    // border: 1px solid mat.get-color-from-palette($accent);
+    border: 1px solid mat.get-color-from-palette($accent);
 }
 
 .outline-warn {
-    // border: 1px solid mat.get-color-from-palette($warn);
+    border: 1px solid mat.get-color-from-palette($warn);
 }
 
 .dashed {
@@ -193,11 +187,11 @@ p {
 
 .mat-card.anup,
 .anup {
-    // @include mat.elevation(5, #e91e63, 0.8);
-    // @include mat.elevation-transition();
+    @include mat.elevation(5, #e91e63, 0.8);
+    @include mat.elevation-transition();
 
     &:hover {
-        // @include mat.elevation(24, #e91e63, 0.8);
+        @include mat.elevation(24, #e91e63, 0.8);
     }
 }
 
