@@ -1,0 +1,76 @@
+<div class="container">
+    <h1>Button Toggle</h1>
+    <mat-divider>
+    </mat-divider>
+    <div class="btn-wrapper mt-3 row">
+        <div class="col-6">
+            <h2>Ex. 01: Single Button Toggle</h2>
+            <mat-button-toggle #myToggle>{{myToggle.checked ? 'Inactive' : 'Active' }}</mat-button-toggle>
+            <p class="mt-3">Current Value: {{myToggle.checked ? 'Active' : 'Inactive' }}</p>
+        </div>
+        <div class="col-6">
+            <h2>Ex. 02: Button Toggle Group</h2>
+            <mat-button-toggle-group #group="matButtonToggleGroup">
+                <mat-button-toggle value="left" aria-label="Text align left">
+                    <mat-icon>format_align_left</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="center" aria-label="Text align center">
+                    <mat-icon>format_align_center</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="right" aria-label="Text align right">
+                    <mat-icon>format_align_right</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="justify" aria-label="Text align justify">
+                    <mat-icon>format_align_justify</mat-icon>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <p class="mt-3" [ngStyle]="{'text-align': group.value }">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Sequi repellendus iusto alias
+                fugiat ut. Reiciendis commodi, fugiat distinctio non aliquam eum quis animi perferendis rem? Laboriosam
+                dolorum aut consectetur reprehenderit?</p>
+        </div>
+        <div class="col-6">
+            <h2>Ex. 03: Multiple Selection</h2>
+            <mat-button-toggle-group #multiGroup="matButtonToggleGroup" multiple>
+                <mat-button-toggle value="Angular" aria-label="Text align left">
+                    Angular
+                </mat-button-toggle>
+                <mat-button-toggle value="React" aria-label="Text align center">
+                    React
+                </mat-button-toggle>
+                <mat-button-toggle value="Vue" aria-label="Text align right">
+                    Vue
+                </mat-button-toggle>
+                <mat-button-toggle value="Java" aria-label="Text align justify">
+                    Java
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <p class="mt-3">
+                {{multiGroup.value}}
+            </p>
+        </div>
+        <div class="col-6">
+            <h2>Ex. 4: Template Driven Form</h2>
+            <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+                <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                <mat-button-toggle value="underline">Underline</mat-button-toggle>
+            </mat-button-toggle-group>
+
+            <p class="mt-3">
+                Chosen value is: {{fontStyle}}
+            </p>
+        </div>
+        <div class="col-6">
+            <h2>Ex. 5: Reactive Form</h2>
+            <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style">
+                <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                <mat-button-toggle value="underline">Underline</mat-button-toggle>
+            </mat-button-toggle-group>
+            <p class="mt-3">
+                Chosen value is: {{fontStyleControl.value}}
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,15 +1,14 @@
-.container {
-    margin-bottom: 80px;
-    .btn-wrapper {
-        display: grid;
-        justify-content: space-between;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-        .btn-card button {
-            margin: 0 8px;
-            &:first-child {
-                margin: 0;
-            }
+.btn-wrapper {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    .btn-card button {
+        margin: 0 8px;
+
+        &:first-child {
+            margin: 0;
         }
     }
 }
