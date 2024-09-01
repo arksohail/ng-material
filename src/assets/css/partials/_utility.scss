@@ -2,8 +2,15 @@
 $primary : mat.define-palette(mat.$deep-purple-palette, A400);
 $accent : mat.define-palette(mat.$amber-palette);
 $warn : mat.define-palette(mat.$red-palette);
-// $foreground: map-get($theme, foreground);
-// $background: map-get($theme, background);
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  )
+));
+$foreground: map-get($theme, foreground);
+$background: map-get($theme, background);
 /*
 1.) Global Links, Utilities & Buttons
 -------------------------------------*/
@@ -82,7 +89,7 @@ p {
 }
 
 .text-light {
-    // color: mat.get-color-from-palette($background, app-bar);
+    color: mat.get-color-from-palette($background, app-bar);
 }
 
 
@@ -117,23 +124,23 @@ p {
 3.) Backgrounds
 -------------------------------------*/
 .bg {
-    // background: mat.get-color-from-palette($foreground, text);
+    background: mat.get-color-from-palette($foreground, text);
 }
 
 .bg-app {
-    // background: mat.get-color-from-palette($background, app-bar);
+    background: mat.get-color-from-palette($background, app-bar);
 }
 
 .bg-hover {
-    // background: mat.get-color-from-palette($background, hover);
+    background: mat.get-color-from-palette($background, hover);
 }
 
 .bg-card {
-    // background: mat.get-color-from-palette($background, card);
+    background: mat.get-color-from-palette($background, card);
 }
 
 .bg-status {
-    // background: mat.get-color-from-palette($background, status-bar);
+    background: mat.get-color-from-palette($background, status-bar);
 }
 
 .bg-primary {
@@ -166,7 +173,7 @@ p {
 -------------------------------------*/
 
 .outline {
-    // border: 1px solid mat.get-color-from-palette($foreground, divider);
+    border: 1px solid mat.get-color-from-palette($foreground, divider);
 }
 
 .outline-primary {
