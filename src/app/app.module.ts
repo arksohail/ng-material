@@ -12,6 +12,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ButtonComponent } from './pages/button/button.component';
 import { ButtonToggleComponent } from './pages/button-toggle/button-toggle.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DynamicColorsComponent } from './pages/dynamic-colors/dynamic-colors.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MainComponent,
     FooterComponent,
     ButtonComponent,
-    ButtonToggleComponent
+    ButtonToggleComponent,
+    DynamicColorsComponent
   ],
   imports: [
     BrowserModule,
