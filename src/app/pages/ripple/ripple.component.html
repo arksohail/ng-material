@@ -1,0 +1,44 @@
+<div class="container">
+    <h2>Ripples</h2>
+    <mat-divider>
+    </mat-divider>
+    <div class="row mt-3">
+
+        <div class="col-5">
+            <mat-checkbox [(ngModel)]="centered" class="ripple-checkbox">Centered</mat-checkbox>
+            <mat-checkbox [(ngModel)]="disabled" class="ripple-checkbox">Disabled</mat-checkbox>
+            <mat-checkbox [(ngModel)]="unbounded" class="ripple-checkbox">Unbounded</mat-checkbox>
+
+            <mat-form-field class="mt-3 ripple-form-field" appearance="fill">
+                <input matInput [(ngModel)]="radius" type="number" placeholder="Radius">
+            </mat-form-field>
+            <mat-form-field class="ripple-form-field" appearance="fill">
+                <input matInput [(ngModel)]="color" type="text" placeholder="Color">
+            </mat-form-field>
+
+
+            <div class="ripple-container mat-elevation-z4" matRipple [matRippleCentered]="centered"
+                [matRippleDisabled]="disabled" [matRippleUnbounded]="unbounded" [matRippleRadius]="radius"
+                [matRippleColor]="color">
+                Click me
+            </div>
+
+
+        </div>
+        <div class="col-6 mt-1">
+            <span #btnTrigger>
+                <button mat-raised-button color="primary">Trigger Ripple</button>
+            </span>
+
+
+            <div class="ripple-container mat-elevation-z4 mt-5" matRipple [matRippleCentered]="centered"
+                [matRippleDisabled]="disabled" [matRippleUnbounded]="unbounded" [matRippleRadius]="radius"
+                [matRippleColor]="color" [matRippleTrigger]="btnTrigger">
+                Click Trigger Ripple Button
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
