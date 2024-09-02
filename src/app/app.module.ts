@@ -13,6 +13,8 @@ import { ButtonComponent } from './pages/button/button.component';
 import { ButtonToggleComponent } from './pages/button-toggle/button-toggle.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DynamicColorsComponent } from './pages/dynamic-colors/dynamic-colors.component';
+import { ElevationComponent } from './pages/elevation/elevation.component';
+import { RippleComponent } from './pages/ripple/ripple.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DynamicColorsComponent } from './pages/dynamic-colors/dynamic-colors.co
     FooterComponent,
     ButtonComponent,
     ButtonToggleComponent,
-    DynamicColorsComponent
+    DynamicColorsComponent,
+    ElevationComponent,
+    RippleComponent
   ],
   imports: [
     BrowserModule,
