@@ -4,6 +4,6 @@
 @import "utility";
 
 
-// @mixin includes-mixin($theme) {
-//     @include utility-mixin($theme);
-// }
+@mixin includes-mixin($theme) {
+    @include utility-mixin($theme);
+}
