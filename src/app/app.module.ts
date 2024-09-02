@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DynamicColorsComponent } from './pages/dynamic-colors/dynamic-colors.component';
 import { ElevationComponent } from './pages/elevation/elevation.component';
 import { RippleComponent } from './pages/ripple/ripple.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RippleComponent } from './pages/ripple/ripple.component';
     ButtonToggleComponent,
     DynamicColorsComponent,
     ElevationComponent,
-    RippleComponent
+    RippleComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
