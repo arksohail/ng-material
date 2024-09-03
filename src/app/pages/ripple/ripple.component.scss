@@ -1,0 +1,28 @@
+.ripple-container {
+  cursor: pointer;
+  text-align: center;
+
+  
+  aspect-ratio: 1;
+  line-height: 1;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** Styles to make the demo look better. */
+.ripple-checkbox {
+  margin: 6px 12px 6px 0;
+}
+
+.ripple-form-field {
+  margin: 0 12px 0 0;
+}
