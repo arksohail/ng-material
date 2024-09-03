@@ -1,1 +1,77 @@
-<p>badge works!</p>
+<div class="container">
+    <h2>Badge</h2>
+    <mat-divider>
+    </mat-divider>
+    <div class="wrapper mt-3">
+        <div class="row">
+            <div class="col-3">
+                <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+                    Badge Position Before
+                </button>
+            </div>
+            <div class="col-3">
+                <button color="primary" mat-raised-button matBadge="4" matBadgeOverlap="false"
+                    matBadgeColor="primary">Button w/o an overlapping badge</button>
+            </div>
+            <div class="col-3">
+                <button mat-raised-button color="primary" matBadge="16" matBadgeColor="accent" matBadgeSize="large">
+                    Button with a large Badge
+                </button>
+            </div>
+            <div class="col-3">
+                <button mat-raised-button color="accent" matBadge="24" matBadgeColor="warn" [matBadgeHidden]="isHidden"
+                    (click)="isHidden = !isHidden">
+                    {{isHidden ? 'Show Badge' : 'Hide Badge'}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <h2 class="mt-4">Example</h2>
+    <mat-divider>
+    </mat-divider>
+    <div class="wrapper mt-3 row">
+        <div class="col-7 mt-2">
+            <mat-card class="mat-elevation-z4 bg-card">
+                <div>
+                    <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+                </div>
+                <div class="mt-4">
+                    <span matBadge="1" matBadgeSize="large">Text with large badge</span>
+                </div>
+                <div class="mt-4">
+                    Button with a badge on the left
+                    <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before"
+                        matBadgeColor="accent">
+                        Action
+                    </button>
+                </div>
+                <div class="mt-4">
+                    Button toggles badge visibility
+                    <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="hidden = !hidden">
+                        Hide
+                    </button>
+                </div>
+                <div class="mt-4">
+                    Icon with a badge
+                    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+                    <!-- Include text description of the icon's meaning for screen-readers -->
+                    <span class="cdk-visually-hidden">
+                        Example with a home icon with overlaid badge showing the number 15
+                    </span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-5 mt-2">
+            <mat-card class="mat-elevation-z4 bg-card">
+                <h3>
+                    Add or Remove Items from the Cart above in Headers
+                </h3>
+                <button mat-button mat-fab color="accent" (click)="addItemCount()"><mat-icon>add</mat-icon></button>
+                <span>
+                    {{itemCount}}
+                </span>
+                <button [disabled]="!itemCount" mat-button mat-fab color="warn" (click)="removeItemCount()"><mat-icon>remove</mat-icon></button>
+            </mat-card>
+        </div>
+    </div>
+</div>
