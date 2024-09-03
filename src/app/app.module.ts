@@ -16,6 +16,7 @@ import { DynamicColorsComponent } from './pages/dynamic-colors/dynamic-colors.co
 import { ElevationComponent } from './pages/elevation/elevation.component';
 import { RippleComponent } from './pages/ripple/ripple.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { BadgeComponent } from './pages/badge/badge.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     DynamicColorsComponent,
     ElevationComponent,
     RippleComponent,
-    MenuComponent
+    MenuComponent,
+    BadgeComponent
   ],
   imports: [
     BrowserModule,
