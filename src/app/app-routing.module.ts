@@ -7,6 +7,7 @@ import { DynamicColorsComponent } from './pages/dynamic-colors/dynamic-colors.co
 import { ElevationComponent } from './pages/elevation/elevation.component';
 import { RippleComponent } from './pages/ripple/ripple.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { BadgeComponent } from './pages/badge/badge.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'elevation', component: ElevationComponent },
   { path: 'ripple', component: RippleComponent },
   { path: 'menu', component: MenuComponent },
+  { path: 'badge', component: BadgeComponent },
 ];
 
 @NgModule({
